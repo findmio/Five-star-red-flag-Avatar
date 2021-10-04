@@ -14,4 +14,4 @@
 
 ### 界面
 
-![image](https://github.com/SharidaLi/Five-star-red-flag-Avatar/blob/main/images/index.png?raw=true)
+<img src="https://github.com/SharidaLi/Five-star-red-flag-Avatar/blob/main/images/index.png?raw=true" alt="image" style="zoom: 33%;" />
