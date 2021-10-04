@@ -50,14 +50,10 @@ export default function IndexPage() {
     if (!canvasRef.current || !imageRef.current || !fiveStarsRef.current) {
       return;
     }
-
     const ctx = canvasRef.current.getContext('2d');
-
-    imageRef.current.src = baseImg;
-    fiveStarsRef.current.src = fiveStars;
-
     ctx!.clearRect(0, 0, size, size);
-
+    
+    imageRef.current.src = baseImg;
     imageRef.current.onload = () => {
       ctx!.drawImage(imageRef.current!, 0, 0, size, size);
       // 填充渐变
@@ -74,22 +70,23 @@ export default function IndexPage() {
       radgrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
       ctx!.fillStyle = radgrad;
       ctx!.fillRect(0, 0, size, size);
-    };
 
-    fiveStarsRef.current!.onload = () => {
-      // 填充星星
-      ctx!.drawImage(
-        fiveStarsRef.current!,
-        0,
-        0,
-        fiveStarsRef.current!.width,
-        fiveStarsRef.current!.height,
-        20,
-        20,
-        starSize * scale,
-        starSize,
-      );
-      setGenerateImg(canvasRef.current!.toDataURL('image/png', 1));
+      fiveStarsRef.current!.src = fiveStars;
+      fiveStarsRef.current!.onload = () => {
+        // 填充星星
+        ctx!.drawImage(
+          fiveStarsRef.current!,
+          0,
+          0,
+          fiveStarsRef.current!.width,
+          fiveStarsRef.current!.height,
+          20,
+          20,
+          starSize * scale,
+          starSize,
+        );
+        setGenerateImg(canvasRef.current!.toDataURL('image/png', 1));
+      };
     };
   };
 
