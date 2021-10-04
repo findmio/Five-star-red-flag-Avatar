@@ -14,4 +14,4 @@
 
 ### 界面
 
-![image](https://github.com/SharidaLi/Five-star-red-flag-Avatar/master/images/index.png?raw=true)
+![image](https://github.com/SharidaLi/Five-star-red-flag-Avatar/blob/main/images/index.png?raw=true)
