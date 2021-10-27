@@ -9,7 +9,7 @@
 
 ### 在线体验
 
-在线体验：[渐变红旗头像生成](https://avatar.lixinmiao.com/)
+在线体验：[渐变红旗头像生成](https://sharidali.github.io/Five-star-red-flag-Avatar)
 
 
 ### 界面

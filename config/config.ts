@@ -1,7 +1,9 @@
 import { defineConfig } from 'umi';
-import routes from './router';  // 路由
-import proxy from './porxy';  // 代理
-import extraPostCSSPlugins from './postcssPlugins';  // 额外的 postcss 配置
+import routes from './router'; // 路由
+import proxy from './porxy'; // 代理
+import extraPostCSSPlugins from './postcssPlugins'; // 额外的 postcss 配置
+
+const path = '/Five-star-red-flag-Avatar';
 
 export default defineConfig({
   routes,
@@ -11,14 +13,11 @@ export default defineConfig({
     config: '/config',
   },
 
+  publicPath: process.env.NODE_ENV === 'production' ? path : '/',
+  base: path,
 
   fastRefresh: {},
-  extraBabelPlugins: [
-    [
-      "import",
-      { "libraryName": "antd-mobile", "libraryDirectory": "es/components", "style": false }
-    ]
-  ],
+  extraBabelPlugins: [['import', { libraryName: 'antd-mobile', libraryDirectory: 'es/components', style: false }]],
   dynamicImport: {
     loading: '@/components/Loading',
   },
