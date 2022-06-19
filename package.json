@@ -22,8 +22,8 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
-    "ahooks": "^2.10.9",
-    "antd-mobile": "5.0.0-beta.14",
+    "ahooks": "^3.5.0",
+    "antd-mobile": "^5.15.1",
     "axios": "^0.21.4",
     "cropperjs": "^1.5.12",
     "dayjs": "^1.10.7",
